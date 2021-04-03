@@ -20,11 +20,11 @@ class ProxyImage {
 	}
 	
 	display() {
-		if(this.realImage == null) {
+		if(this.realImage === null) {
 			this.realImage = new RealImage(this.fileName);
+		} else {
+			this.realImage.display();
 		}
-		
-		this.realImage.display();
 	}
 }
 
